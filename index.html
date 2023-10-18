@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <title>RVJ</title>
+    <style>
+        body {
+            background-color: rgb(247, 241, 241);
+        }
+    </style>
+    <!-- <style>
+        body{
+            background-color: rgb(247, 241, 241);
+        }
+        .popup .overlay{
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100vw;
+            height: 100vh;
+            background:rgba(0, 0, 0, 0.7);
+            z-index: 1;
+            display: none;
+        }
+        .popup .content{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%) scale(0);
+            background: #fff;
+            width: 450px;
+            height: 220px;
+            z-index: 2;
+            text-align: center;
+            padding:20px;
+            box-sizing:border-box;
+        }
+        .popup .close-btn{
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            width: 30px;
+            height: 30px;
+            background: #222;
+            color:#fff;
+            font-size: 25px;
+            font-weight: 600;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+        }
+        .popup .active .overlay{
+            display: block;
+        }
+        .popup .active .content{
+            transition:all 300ms ease-in-out;
+            transform: translate(-50%,-50%) scale(1);
+        }
+
+
+    </style> -->
+</head>
+
+<body>
+    
+    <div class="container">
+        <h1 class="text-center fw-bold text-danger p-4">RVJ INFOTECH SOFTWARE COMPONY</h1>
+        <div class="row">
+            <div class="col-md-12 bg-white shadow-lg p-5">
+                <div class="d-flex bg-primary p-2 w-100 justify-content-between align-items-center">
+                    <div>
+                        <h4 class="text-white fw-bold">#WELCOME TO RVJ INFOTECH</h4>
+                    </div>
+                    <div>
+                        <button class="btn p-0 m-0 btn-light">
+                            <input type="search" class="searchly form-control" placeholder="search">
+                        </button>
+                        <button class="btn delete-all-btn btn-danger fw-bold">
+                            <i class="fa fa-minus"></i>Delete All
+                        </button>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-success add-btn" data-toggle="modal" data-target="#exampleModal">
+                            <i class="fa fa-add"></i>New User
+                        </button>
+                        <!-- <button  class="btn btn-success fw-bold" data-bs-toggle=".modal" data-bs-target="#myModal">
+                            <i class="fa fa-add"></i>Add New User
+                        </button> -->
+                        <!-- <button  class="btn btn-success fw-bold">
+                            <i class="fa fa-plus"></i><a href="add.html" class="text-white">Add New User</a>
+                        </button> -->
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-12">
+                        <table class="table table-striped text-center">
+                            <thead>
+                                <tr>
+                                    <th class="fw-bold">Sr</th>
+                                    <th class="fw-bold">Name</th>
+                                    <th class="fw-bold">Emali</th>
+                                    <th class="fw-bold">DOB</th>
+                                    <th class="fw-bold">Mobile</th>
+                                    <th class="fw-bold">Password</th>
+                                    <!-- <th>Password</th> -->
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="reg-list">
+                                <!-- <tr>
+                                    <td>1</td>
+                                    <td>vikas</td>
+                                    <td>vikas@gmail.com</td>
+                                    <td>76-353-636</td>
+                                    <td>76862437567</td>
+                                    <td>123</td>
+                                    <td>
+                                        <button class="btn p-1 px-2 btn-primary">
+                                            <i class="fa fa-edit"></i>
+                                        </button>
+                                        <button class="btn p-1 px-2 btn-danger">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title" id="exampleModalLabel">ADD NEW USER</h5>
+                    <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST" action="" class="register-form">
+                        <div class="row">
+                            <div class="col-4">
+                                <label class="label" for="">name</label>
+                                <input class="form-control" required value="" type="text" placeholder="Enter your name" name="name">
+                            </div>
+                            <div class="col-4">
+                                <label class="label" for="">Email</label>
+                                <input class="form-control" required value="" type="email" placeholder="Enter your Valid Email Address"
+                                    name="email">
+                            </div>
+                            <div class="col-4">
+                                <label class="label" for="">Phone</label>
+                                <input class="form-control" required value="" type="number"
+                                    placeholder="Enter Your 10 digit valid mobile number" name="phone">
+                            </div>
+                            <div class="col-4">
+                                <label class="label" for="">DOB</label>
+                                <input class="form-control" required value="" type="date" name="dob">
+                            </div>
+                            <div class="col-4">
+                                <label class="label" for="">password</label>
+                                <input class="form-control" required value="" type="password" placeholder="password" name="pasword">
+                            </div>
+                            <div class="col-4">
+                                <label class="label" for="">Gender</label>
+                                <select class="form-control" type="text" placeholder="Enter Your 6 digit valid Pin Code" name="gender">
+                                    <option value="male"></option>
+                                    <option selected disabled>-Chose Gender-</option>
+                                    <option value="male">male</option>
+                                    <option value="female">female</option>
+                                    <option value="others">others</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <button class="btn btn-success" type="submit" name="submit">Submit</button>
+                            <button class="btn fw-bold btn-danger mx-1" type="button">Update</button>
+                            <!-- <button class="btn fw-bold btn-warning mx-1" type="button"><a href="index.html" class="text-white" id="close-btnly">Home</a></button> -->
+                        </div>
+                    </form>
+                    ...
+                </div>
+                <div class="modal-footer bg-dark">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
